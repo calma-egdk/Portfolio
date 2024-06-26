@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bio Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+      background-image: url('black.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    h1 {
+      color: #f2f0f0;
+      text-align: center;
+    }
+
+    .bio-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bio-container h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .bio-container p {
+      color: #050303;
+      line-height: 1.5;
+    }
+
+    .bio-container ul {
+      list-style-type: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .bio-container ul li {
+      color: #040303;
+      margin-bottom: 10px;
+    }
+
+    .decorative-line {
+      height: 2px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+
+    .decorative-line:before,
+    .decorative-line:after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 100%;
+      background-color: #ccc;
+    }
+
+    .decorative-line:before {
+      margin-right: 10px;
+    }
+
+    .decorative-line:after {
+      margin-left: 10px;
+    }
+    
+    .gallery-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      
+      margin: 10px;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  </style>
+    <script type="module">
+      import { SpeedInsights } from "@vercel/speed-insights/next"
+    </script>
+    <script>
+      // Function to increment and display the visit counter
+      function incrementCounter() {
+        if (typeof(Storage) !== "undefined") {
+          if (localStorage.visitCount) {
+            localStorage.visitCount = Number(localStorage.visitCount) + 1;
+          } else {
+            localStorage.visitCount = 1;
+          }
+          document.getElementById("counter").textContent = "Visitors: " + localStorage.visitCount;
+        } else {
+          console.log("Local storage is not supported.");
+        }
+      }
+  
+      // Update the counter on page load
+      window.onload = function() {
+        incrementCounter();
+      };
+  
+      function updateServerTime() {
+          var serverTime = new Date().toLocaleString();
+          document.getElementById('serverTime').textContent = serverTime;
+        }
+        setInterval(updateServerTime, 1000);
+    </script>
+</head>
+<body>
+  <h1>Bio Page</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Bio</a></li>
+      <li><a href="qualification.html">Qualification</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <h2 style="text-align: center;color: white;">Welcome to My Personal Page</h2>
+  <h2 style="text-align: center;color: white;"><i>Hi! I'm Caroline.</i></h2>
+  <div class="bio-container">
+    <div class="gallery-container">
+      <div class="gallery-item">
+    <img src="im5.jpeg"/> </div></div>
+    <h2 style="text-align: center;">About Me</h2>
+    <p><b>
+      Proactive, dedicated, and self-motivated IT engineer, with a strong passion for web development, always 
+looking for challenges that push me to give my best and to contribute to the field of computer science. Highly 
+organized, and skilled in written and verbal communication. Looking to leverage my analytical and technical 
+skills to help the organization accomplish its goals and work towards self-development.</b>
+    </p>
+
+    <h2 style="text-align: center;">Skills</h2>
+  <li>Basic Computer Skills: Excel, Word and Powerpoint</li>
+<li>Programming Languages: HTML5, mySQL, Python, JAVA, C++, C </li>
+<li>Personal skills: Time management, attention to detail, good writen and spoken english, ability to work individually and in a team, articulate</li>
+<li>Additional Languages: Korean (Elementary Proficiency), Spanish (Working Proficiency)</li>
+<p><div style="text-align: center; color: #040303;">
+  <div id="counter"></div> </p>
+</div>
+ <p><div style="text-align: center; color:black;" class="digital-clock">
+    Server Time: <span id="serverTime"></span>
+ </p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      padding: 100px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+  
+      background-image: url("cont.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+
+    h1 {
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .contact-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+  </style>
+
+<script>
+  function showThankYou() {
+      alert("Thank you for your message!");
+  }
+</script>
+</head>
+<body>
+  <h1>Contact Page</h1>
+  <nav>
+    <ul>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="qualification.html">Qualification</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div> <p><b><a href="https://github.com/Carol3n">Github</a></b></p>
+    <p><b><a href="https://www.instagram.com/carol3n/">Instagram</a></b></p></div>
+  <div class="contact-form">
+    <form action="#" method="post">
+      <label for="name" style="color: #fff;">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email" style="color: #fff;">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="message" style="color: #fff;">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" onclick="showThankYou()" style="color: #fff;">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

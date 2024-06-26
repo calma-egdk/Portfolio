@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("img6.jpg");
+      background-size: 100%;
+      background-position: cover;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .gallery-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: aliceblue;">Photo Gallery Page</h1>
+  <nav>
+    <ul>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="qualification.html">Qualification</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="im1.jpeg" alt="Image 1">
+    </div>
+
+    <div class="gallery-item">
+      <img src="im2.jpeg" alt="Image 2">
+    </div>
+
+    <div class="gallery-item">
+      <img src="im3.jpeg" alt="Image 3">
+    </div>
+
+    <div class="gallery-item">
+      <img src="im4.jpeg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+      <img src="im5.jpeg" alt="Image 5">
+    </div>
+  </div>
+</body>
+</html>
